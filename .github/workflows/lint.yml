@@ -17,6 +17,6 @@ jobs:
       - run: npm run lint:html
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v5.0.0
+      - uses: docs/example-action@b16d2601a6b948e2fb26f3772276581f31daa7cd
         env:
           SONAR_TOKEN: ${{ secrets.TOKEN_LAFLEUR_DEVOPS_1 }}
