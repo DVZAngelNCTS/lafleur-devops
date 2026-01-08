@@ -1,0 +1,24 @@
+{
+  "name": "lafleur-devops",
+  "version": "1.0.0",
+  "description": "lafleur-devops",
+  "main": "index.js",
+  "scripts": {
+    "lint:html": "htmlhint ‘**/*.html’"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DVZAngelNCTS/lafleur-devops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DVZAngelNCTS/lafleur-devops/issues"
+  },
+  "homepage": "https://github.com/DVZAngelNCTS/lafleur-devops#readme",
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "htmlhint": "^1.8.0"
+  }
+}
