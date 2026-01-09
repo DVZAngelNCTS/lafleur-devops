@@ -6,10 +6,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: docs/example-action@b16d2601a6b948e2fb26f3772276581f31daa7cd
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@8f4b7f8b45c4fba0d5e6e1c7a4f6d6a7b3c2a1e9
       - name: Installer Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@60f8a91b6c1c62c1b2b4a9bb44c6fa8b4c7a1d44
         with:
           node-version: '18'
       - run: npm install
@@ -18,5 +17,6 @@ jobs:
       - run: npm run lint:html
 
       - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@3f3b4f5f25d2f8d6e6c09b4c1a47a9e42cbb6f6e
         env:
           SONAR_TOKEN: ${{ secrets.TOKEN_LAFLEUR_DEVOPS_1 }}
