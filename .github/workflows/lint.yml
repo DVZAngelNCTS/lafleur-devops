@@ -6,14 +6,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@8f4b7f8b45c4fba0d5e6e1c7a4f6d6a7b3c2a1e9 # v3
+
       - name: Installer Node.js
-        uses: actions/setup-node@60f8a91b6c1c62c1b2b4a9bb44c6fa8b4c7a1d44
+        uses: actions/setup-node@60f8a91b6c1c62c1b2b4a9bb44c6fa8b4c7a1d44 # v3
         with:
           node-version: '18'
+
       - run: npm install
-      - name: Grant execution permissions
-        run: chmod +x ./node_modules/.bin/htmlhint
+      - run: chmod +x ./node_modules/.bin/htmlhint
       - run: npm run lint:html
 
       - name: SonarCloud Scan
